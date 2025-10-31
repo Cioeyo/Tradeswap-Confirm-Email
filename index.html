@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Success! Email Confirmed - Tradeswap App</title>
     <style>
         /* BASE STYLES & BACKGROUND */
@@ -12,10 +12,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            /* Use 'height: 100vh;' for consistent viewport height on all devices */
+            height: 100vh;
             margin: 0;
             color: #333;
             text-align: center;
+            /* Prevents horizontal scrolling on some mobile browsers */
+            overflow-x: hidden; 
         }
         
         /* CONTAINER CARD */
@@ -24,9 +27,11 @@
             padding: 50px 30px;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            max-width: 450px;
-            width: 90%;
+            max-width: 450px; 
+            width: 90%; 
             box-sizing: border-box;
+            /* Add some margin for visual buffer on small devices */
+            margin: 20px; 
         }
 
         /* LOGO & HEADINGS */
@@ -70,6 +75,25 @@
             font-size: 0.85em;
             color: #777;
         }
+
+        /* --- RESPONSIVENESS: MEDIA QUERIES --- */
+        @media (max-width: 600px) {
+            .container {
+                /* Reduce padding to maximize space on small screens */
+                padding: 30px 20px; 
+                margin: 10px; /* Reduce margin */
+            }
+
+            h1 {
+                /* Slightly reduce font size for smaller screens */
+                font-size: 1.8em; 
+            }
+
+            p {
+                /* Slightly reduce body text font size for better fit */
+                font-size: 1.0em; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -79,10 +103,10 @@
         </div>
         <h1><span>🎉</span> Email Confirmed! <span>🎉</span></h1>
         
-        <p>Your email address has been "successfully verified" for the "Tradeswap App".</p>
+        <p>Your email address has been successfully verified for the Tradeswap App.</p>
         
         <p class="instruction">
-            You can now safely "close this browser window" and return to your "Tradeswap App" to log in and start using the features.
+            You can now safely **close this browser window** and return to your **Tradeswap App** to log in and start using the features.
         </p>
 
         <p class="footer">
