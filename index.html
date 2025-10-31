@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success! Email Confirmed - Tradeswap App</title>
     <style>
         /* BASE STYLES & BACKGROUND */
@@ -12,16 +12,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Use 'height: 100vh;' for consistent viewport height on all devices */
-            height: 100vh;
+            /* Using min-height is generally safer than height: 100vh on mobile */
+            min-height: 100vh; 
             margin: 0;
             color: #333;
             text-align: center;
-            /* Prevents horizontal scrolling on some mobile browsers */
             overflow-x: hidden; 
         }
         
-        /* CONTAINER CARD */
+        /* CONTAINER CARD (Desktop Default) */
         .container {
             background-color: #ffffff;
             padding: 50px 30px;
@@ -30,8 +29,7 @@
             max-width: 450px; 
             width: 90%; 
             box-sizing: border-box;
-            /* Add some margin for visual buffer on small devices */
-            margin: 20px; 
+            margin: 20px auto; /* Keeps it centered vertically and horizontally */
         }
 
         /* LOGO & HEADINGS */
@@ -64,7 +62,7 @@
         }
         .instruction {
             font-weight: bold;
-            color: #000; /* Make the final instruction stand out */
+            color: #000;
         }
 
         /* FOOTER */
@@ -76,22 +74,42 @@
             color: #777;
         }
 
-        /* --- RESPONSIVENESS: MEDIA QUERIES --- */
+        /* --- RESPONSIVENESS: MEDIUM SCREENS (Up to 600px) --- */
         @media (max-width: 600px) {
             .container {
-                /* Reduce padding to maximize space on small screens */
-                padding: 30px 20px; 
-                margin: 10px; /* Reduce margin */
+                padding: 40px 25px; 
             }
 
             h1 {
-                /* Slightly reduce font size for smaller screens */
                 font-size: 1.8em; 
             }
 
             p {
-                /* Slightly reduce body text font size for better fit */
                 font-size: 1.0em; 
+            }
+        }
+
+        /* --- RESPONSIVENESS: SMALL SCREENS (Up to 400px - Optimized for small phones) --- */
+        @media **(max-width: 400px)** {
+            .container {
+                /* Reduced padding to maximize space on tiny screens */
+                padding: **30px 15px**; 
+                margin: 10px;
+            }
+
+            h1 {
+                /* Further reduced heading size */
+                font-size: **1.6em**; 
+            }
+
+            .logo {
+                /* Slightly smaller logo */
+                max-width: **100px**; 
+            }
+
+            p {
+                /* Slightly smaller body text */
+                font-size: **0.95em**; 
             }
         }
     </style>
